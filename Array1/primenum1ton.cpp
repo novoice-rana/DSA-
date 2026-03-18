@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+void printPrime(int n)
+{
+    for (int num = 2; num < n; num++)
+    {
+        bool isPrime = true;
+        for (int i = 2; i < num; i++)
+        {
+            if (num % i == 0)
+            {
+                isPrime = false;
+                break;
+            }
+        }
+        if (isPrime)
+        {
+            cout << num << " ";
+        }
+    }
+}
+int main()
+{
+    printPrime(32);
+}
