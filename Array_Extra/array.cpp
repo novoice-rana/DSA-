@@ -1,0 +1,33 @@
+#include<iostream>
+#include<algorithm>
+using namespace std;
+
+    void shiftNegative( int arr[],int n){
+        int j=0;
+        for(int i =0;i<n;i++){
+
+            if(arr[i]<0){
+            swap(arr[i],arr[j]);
+            j++;
+
+            }
+
+
+        }
+        
+
+        
+    }
+int main(){
+    int n=9;
+    int arr[]={1,4,5,7,-7,-5,-4,22,-3};
+    shiftNegative(arr,n);
+    for(int i=0;i<n;i++){
+        cout<<arr[i]<<" ";
+    }
+
+    
+    
+
+    return 0;
+}
