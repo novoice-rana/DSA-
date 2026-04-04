@@ -1,27 +1,23 @@
 class Solution {
 public:
-    void reverseVector(vector<int>& arr){
-        int n=arr.size();
-        int start=0;
-        int end=n-1;
-         while(start<end){
-            swap(arr[start],arr[end]);
-            start++;
-            end--;
-         }
-    }
     void rotate(vector<vector<int>>& matrix) {
         int n=matrix.size();
         //transpose
-        for(int i=0;i<n;i++){
-            for(int j=i;j<matrix[i].size();j++){
+        for(int i=0;i<n-1;i++){
+            for(int j=i+1;j<n;j++){
                 swap(matrix[i][j],matrix[j][i]);
             }
-        }
-        // reverse -> 2D Matrix ki saari rows ko 
-        // kitni rows hai 0-n-1
+        };
+        //reverse each row
         for(int i=0;i<n;i++){
-            reverseVector(matrix[i]);
+            int start =0,end=n-1;
+            while(start<end){
+                swap(matrix[i][start],matrix[i][end]);
+                start++,end--;
+            }
         }
+        
     }
+        
+    
 };
