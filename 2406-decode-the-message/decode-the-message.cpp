@@ -15,8 +15,8 @@ public:
         }
         //use mapping
         string ans;
-        for(int i=0;i<message.length();i++){
-            char ch =message[i];
+        for(auto ch:message){
+            
             if(ch ==' '){
                 ans.push_back(' ');
 
